@@ -10,6 +10,7 @@ downloads/*
 !downloads/.gitkeep
 *.log
 .DS_Store
-.env.local
+.env.example
 .env.production
 *.local
+.env
