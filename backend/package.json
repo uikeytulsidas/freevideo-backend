@@ -6,7 +6,9 @@
   "type": "commonjs",
   "scripts": {
     "dev": "nodemon --watch src --ext js,json --ignore downloads src/server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+     "check:tools": "node -e \"require('./src/services/ytdlp.service').checkYtDlp().then(r=>{console.log(JSON.stringify(r,null,2)); if(!r.ok) process.exit(1);})\""
+  
   },
   "dependencies": {
     "cors": "^2.8.5",
